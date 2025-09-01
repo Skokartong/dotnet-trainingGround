@@ -35,6 +35,11 @@ public class PersonTests
 
         // Assert
         Assert.NotNull(person.Address);
+        Assert.IsType<Address>(person.Address);
+
         Assert.Equal("Stockholmsvägen", person.Address.Street);
+        Assert.Equal(1, person.Address.StreetNumber);
+        Assert.Equal("Stockholm", person.Address.City);
+        Assert.Equal(12345, person.Address.ZipCode);
     }
 }
