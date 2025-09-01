@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Test Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/TrainingGround.Tests/bin/Debug/net9.0/TrainingGround.Tests.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/TrainingGround.Tests",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        }
+    ]
+}
