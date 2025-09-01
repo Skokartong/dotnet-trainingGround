@@ -23,4 +23,18 @@ public class PersonTests
         // Assert
         Assert.Equal(person.BirthYear, DateTime.Now.Year - 50);
     }
+
+    [Fact]
+    public void a_person_has_an_adress()
+    {
+        // Arrange
+        var person = new Person("Hilda", 50, 1.7, true);
+
+        // Act
+        person.Address = new Address("Stockholmsvägen", 1, "Stockholm", 12345);
+
+        // Assert
+        Assert.NotNull(person.Address);
+        Assert.Equal("Stockholmsvägen", person.Address.Street);
+    }
 }
