@@ -42,4 +42,10 @@ public class PersonTests
         Assert.Equal("Stockholm", person.Address.City);
         Assert.Equal(12345, person.Address.ZipCode);
     }
+
+    [Fact]
+    public void a_student_gets_a_nice_printed_address()
+    {
+
+    }
 }

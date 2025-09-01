@@ -1,4 +1,4 @@
 public interface IPrintable
 {
-    void Print();
+    public string Print();
 }

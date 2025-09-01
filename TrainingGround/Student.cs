@@ -8,8 +8,9 @@ public class Student : Person, IPrintable
         StudentId = studentId;
     }
 
-    public void Print()
+    public string Print()
     {
-        Console.WriteLine($"Student ID: {StudentId}, Name: {Name}, Birth Year: {BirthYear}, Height: {HeightInMeters}m, Address: {Address?.Street} {Address?.StreetNumber}, {Address?.ZipCode} {Address?.City}");
+        var result = $"Student ID: {StudentId}, Name: {Name}, Birth Year: {BirthYear}, Height: {HeightInMeters}m, Address: {Address?.Street} {Address?.StreetNumber}, {Address?.ZipCode} {Address?.City}";
+        return result;
     }
 }
