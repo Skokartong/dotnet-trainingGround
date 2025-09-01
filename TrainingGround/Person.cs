@@ -4,6 +4,7 @@ public class Person
     public int BirthYear { get; private set; }
     public double HeightInMeters { get; private set; }
     public Address? Address { get; set; }
+    public AgeGroup AgeGroup { get; set; }
 
     public Person(string name, int birthYear, double heightInMeters, Address? address = null)
     {
@@ -25,5 +26,26 @@ public class Person
     public int GetAge(int currentYear)
     {
         return currentYear - BirthYear;
+    }
+
+    public void SetAgeGroup()
+    {
+        var age = GetAge(DateTime.Now.Year);
+        if (age < 13)
+        {
+            AgeGroup = AgeGroup.Child;
+        }
+        else if (age < 20)
+        {
+            AgeGroup = AgeGroup.Teen;
+        }
+        else if (age < 65)
+        {
+            AgeGroup = AgeGroup.Adult;
+        }
+        else
+        {
+            AgeGroup = AgeGroup.Senior;
+        }
     }
 }
