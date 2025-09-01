@@ -46,6 +46,15 @@ public class PersonTests
     [Fact]
     public void a_student_gets_a_nice_printed_address()
     {
+        // Arrange
+        var student = new Student("Hilda", 1999, 1.7, "12345");
+        student.Address = new Address("Stockholmsvägen", 1, "Stockholm", 12345);
 
+        // Act
+        var printedAddress = student.Print();
+        var expected = $"Student ID: 12345, Name: Hilda, Birth Year: 1999, Height: 1.7m, Address: Stockholmsvägen 1, 12345 Stockholm";
+
+        // Assert
+        Assert.Equal(expected, printedAddress);
     }
 }
