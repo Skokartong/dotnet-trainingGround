@@ -4,6 +4,13 @@ namespace TrainingGround.Tests;
 
 public class PersonTests
 {
+    private Person _person;
+
+    public PersonTests()
+    {
+        _person = new Person("Hilda", 1972, 1.7);
+    }
+
     [Fact]
     public void create_person_with_constructor()
     {
