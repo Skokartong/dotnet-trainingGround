@@ -30,4 +30,18 @@ public class CollectionTests
         Assert.Equal("one", strings[0]);
         Assert.Equal("three", strings[2]);
     }
+
+    [Fact]
+    public void showing_object_initializer_syntax()
+    {
+        // Arrange
+        var a = new Address("Gatan", 1, "Staden", 12345);
+        var b = new Address("Gatan", 1, "Staden", 12345);
+
+        // Assert
+        Assert.Equal(b.Street, a.Street);
+        Assert.Equal(b.StreetNumber, a.StreetNumber);
+        Assert.Equal(b.City, a.City);
+        Assert.Equal(b.ZipCode, a.ZipCode);
+    }
 }

@@ -5,6 +5,8 @@ public class Address
     public string City { get; set; }
     public int ZipCode { get; set; }
 
+    public Address() { }
+
     public Address(string street, int streetNumber, string city, int zipCode)
     {
         Street = street;
