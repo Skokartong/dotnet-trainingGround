@@ -25,10 +25,23 @@ public class PersonTests
     }
 
     [Fact]
-    public void get_age_returns_correct_age()
+    public void create_student_with_constructor()
     {
         // Assert
-        Assert.Equal(person.BirthYear, DateTime.Now.Year - 50);
+        Assert.NotNull(student);
+    }
+
+    [Fact]
+    public void get_age_returns_correct_age()
+    {
+        // Arrange
+        var currentYear = DateTime.Now.Year;
+
+        // Act
+        var age = person.GetAge(currentYear);
+
+        // Assert
+        Assert.Equal(currentYear - person.BirthYear, age);
     }
 
     [Fact]
