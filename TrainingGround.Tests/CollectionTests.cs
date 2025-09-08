@@ -35,8 +35,19 @@ public class CollectionTests
     public void showing_object_initializer_syntax()
     {
         // Arrange
-        var a = new Address("Gatan", 1, "Staden", 12345);
-        var b = new Address("Gatan", 1, "Staden", 12345);
+        var a = new Address();
+        a.Street = "Gatan";
+        a.StreetNumber = 1;
+        a.City = "Staden";
+        a.ZipCode = 12345;
+
+        var b = new Address
+        {
+            Street = "Gatan",
+            StreetNumber = 1,
+            City = "Staden",
+            ZipCode = 12345
+        };
 
         // Assert
         Assert.Equal(b.Street, a.Street);
