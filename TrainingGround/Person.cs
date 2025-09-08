@@ -48,4 +48,21 @@ public class Person
             AgeGroup = AgeGroup.Senior;
         }
     }
+
+    public static string GetAgeGroup(AgeGroup ageGroup)
+    {
+        switch (ageGroup)
+        {
+            case AgeGroup.Child:
+                return "Just a child!";
+            case AgeGroup.Teen:
+                return "Teenager...";
+            case AgeGroup.Adult:
+                return "Adult in the prime of life";
+            case AgeGroup.Senior:
+                return "Person with experience";
+            default:
+                return "Unknown";
+        }
+    }
 }
