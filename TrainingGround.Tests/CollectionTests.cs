@@ -55,4 +55,21 @@ public class CollectionTests
         Assert.Equal(b.City, a.City);
         Assert.Equal(b.ZipCode, a.ZipCode);
     }
+
+    [Fact]
+    public void a_list_is_very_flexible()
+    {
+        // Arrange
+        var integerList = new List<int>();
+        integerList.Add(1);
+        integerList.Add(2);
+        integerList.Add(3);
+
+        integerList.RemoveAt(0); // Removes the first item at index 0
+
+        // Assert
+        Assert.Equal(2, integerList[0]);
+        Assert.Equal(3, integerList[1]);
+        Assert.Equal(2, integerList.Count);
+    }
 }
