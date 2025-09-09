@@ -16,5 +16,18 @@ public class LinqTests
         // Assert
         Assert.False(allPositive);
     }
+
+    [Fact]
+    public void linq_to_find_first_letter_at_correct_index()
+    {
+        // Arrange
+        var letters = new List<char> { 'a', 'b', 'b', 'c', 'b', 'q', 'z' };
+
+        // Act
+        var firstIndexB = letters.FindIndex(l => l == 'b');
+
+        // Assert
+        Assert.Equal(1, firstIndexB);
+    }
 }
 
