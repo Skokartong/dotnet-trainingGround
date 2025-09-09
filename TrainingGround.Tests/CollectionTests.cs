@@ -74,4 +74,21 @@ public class CollectionTests
         Assert.Equal(3, integerList[1]);
         Assert.Equal(2, integerList.Count);
     }
+
+    [Fact]
+    public void a_list_can_hold_any_type()
+    {
+        // Arrange
+        var objectList = new List<object>();
+        var person = new Person("Lennart", 1980, 1.75, new Address("Street", 100, "New York", 111111));
+        objectList.Add(person);
+        objectList.Add("A string");
+        objectList.Add(100);
+
+        // Assert
+        Assert.Equal(3, objectList.Count);
+        Assert.IsType<Person>(objectList[0]);
+        Assert.IsType<string>(objectList[1]);
+        Assert.IsType<int>(objectList[2]);
+    }
 }
