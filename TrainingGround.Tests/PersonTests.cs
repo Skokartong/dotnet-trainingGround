@@ -11,10 +11,10 @@ public class PersonTests
     public PersonTests()
     {
         person = new Person("Hilda", 1972, 1.7);
-        person.Address = new Address("Stockholmsvägen", 1, "Stockholm", 12345);
+        person.Addresses.Add(new Address("Stockholmsvägen", 1, "Stockholm", 12345));
 
         student = new Student("Torbjörn", 1999, 1.8, "12345");
-        student.Address = new Address("Malmövägen", 2, "Malmö", 54321);
+        student.Addresses.Add(new Address("Malmövägen", 2, "Malmö", 54321));
     }
 
     [Fact]
@@ -48,13 +48,13 @@ public class PersonTests
     public void a_person_has_an_adress()
     {
         // Assert
-        Assert.NotNull(person.Address);
-        Assert.IsType<Address>(person.Address);
+        Assert.NotNull(person.Addresses);
+        Assert.IsType<Address>(person.Addresses[0]);
 
-        Assert.Equal("Stockholmsvägen", person.Address.Street);
-        Assert.Equal(1, person.Address.StreetNumber);
-        Assert.Equal("Stockholm", person.Address.City);
-        Assert.Equal(12345, person.Address.ZipCode);
+        Assert.Equal("Stockholmsvägen", person.Addresses[0]?.Street);
+        Assert.Equal(1, person.Addresses[0]?.StreetNumber);
+        Assert.Equal("Stockholm", person.Addresses[0]?.City);
+        Assert.Equal(12345, person.Addresses[0]?.ZipCode);
     }
 
     [Fact]
@@ -62,7 +62,7 @@ public class PersonTests
     {
         // Act
         var printedAddress = student.Print();
-        var expected = $"Student ID: 12345, Name: Torbjörn, Birth Year: 1999, Height: 1.8m, Address: Malmövägen 2, 54321 Malmö";
+        var expected = $"Student ID: 12345, Name: Torbjörn, Birth Year: 1999, Height: 1.8m, Address/Addresses: Malmövägen 2, 54321 Malmö";
 
         // Assert
         Assert.Equal(expected, printedAddress);

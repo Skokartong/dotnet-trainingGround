@@ -80,7 +80,10 @@ public class CollectionTests
     {
         // Arrange
         var objectList = new List<object>();
-        var person = new Person("Lennart", 1980, 1.75, new Address("Street", 100, "New York", 111111));
+        var person = new Person("Lennart", 1980, 1.75);
+        person.Addresses.Add(new Address("Street", 100, "New York", 111111));
+
+        // Act
         objectList.Add(person);
         objectList.Add("A string");
         objectList.Add(100);
@@ -97,18 +100,16 @@ public class CollectionTests
     {
         // Arrange
         var student = new Student("Louise", 2000, 1.68, "54321");
-
-        var addresses = new List<Address>();
         var address1 = new Address("Gatan", 1, "Staden", 12345);
         var address2 = new Address("Vägen", 2, "Byhålan", 54321);
 
         // Act
-        addresses.Add(address1);
-        addresses.Add(address2);
+        student.Addresses.Add(address1);
+        student.Addresses.Add(address2);
 
         // Assert
-        Assert.Equal(2, addresses.Count);
-        Assert.Equal("Gatan", addresses[0].Street);
-        Assert.Equal("Vägen", addresses[1].Street);
+        Assert.Equal(2, student.Addresses.Count);
+        Assert.Equal("Gatan", student.Addresses[0]?.Street);
+        Assert.Equal("Vägen", student.Addresses[1]?.Street);
     }
 }
