@@ -25,4 +25,20 @@ public class ConditionalTests
         Assert.Equal(AgeGroup.Adult, adult.AgeGroup);
         Assert.Equal(AgeGroup.Senior, senior.AgeGroup);
     }
+
+    [Fact]
+    public void get_age_group_returns_correct_message()
+    {
+        // Arrange
+        var child = new Person("Jörgen", 2015, 1.21);
+
+        child.SetAgeGroup();
+        var childMessage = "Just a child!";
+
+        // Act
+        var childResult = Person.GetAgeGroup(child.AgeGroup);
+
+        // Assert
+        Assert.Equal(childMessage, childResult);
+    }
 }
