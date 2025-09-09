@@ -91,4 +91,22 @@ public class CollectionTests
         Assert.IsType<string>(objectList[1]);
         Assert.IsType<int>(objectList[2]);
     }
+
+    [Fact]
+    public void a_person_can_have_more_than_one_address()
+    {
+        // Arrange
+        var addresses = new List<Address>();
+        var address1 = new Address("Gatan", 1, "Staden", 12345);
+        var address2 = new Address("Vägen", 2, "Byhålan", 54321);
+
+        // Act
+        addresses.Add(address1);
+        addresses.Add(address2);
+
+        // Assert
+        Assert.Equal(2, addresses.Count);
+        Assert.Equal("Gatan", addresses[0].Street);
+        Assert.Equal("Vägen", addresses[1].Street);
+    }
 }
