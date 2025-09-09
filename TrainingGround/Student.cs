@@ -10,7 +10,7 @@ public class Student : Person, IPrintable
 
     public string Print()
     {
-        var result = $"Student ID: {StudentId}, Name: {Name}, Birth Year: {BirthYear}, Height: {HeightInMeters.ToString(System.Globalization.CultureInfo.InvariantCulture)}m, Address: {Address?.Street} {Address?.StreetNumber}, {Address?.ZipCode} {Address?.City}";
+        var result = $"Student ID: {StudentId}, Name: {Name}, Birth Year: {BirthYear}, Height: {HeightInMeters.ToString(System.Globalization.CultureInfo.InvariantCulture)}m, Address/Addresses: {Addresses.ToList()}";
         return result;
     }
 }
