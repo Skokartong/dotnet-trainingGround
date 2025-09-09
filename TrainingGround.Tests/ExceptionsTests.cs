@@ -15,4 +15,22 @@ public class ExceptionsTests
         var exception = Assert.Throws<Exception>(() => person.GetAge(currentYear));
         Assert.Equal("Not born yet", exception.Message);
     }
+
+    [Fact]
+    public void divide_by_zero_throws_exception()
+    {
+        try
+        {
+            // Arrange
+            var i = 1;
+
+            // Act
+            var result = 1 / (i - 0);
+        }
+        catch (System.DivideByZeroException ex)
+        {
+            // Assert
+            Assert.IsType<System.DivideByZeroException>(ex);
+        }
+    }
 }
