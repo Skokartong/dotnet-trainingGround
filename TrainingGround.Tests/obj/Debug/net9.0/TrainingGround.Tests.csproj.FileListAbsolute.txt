@@ -101,3 +101,4 @@ C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\obj\De
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\obj\Debug\net9.0\TrainingGround.Tests.genruntimeconfig.cache
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\obj\Debug\net9.0\ref\TrainingGround.Tests.dll
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\obj\Debug\net9.0\TrainingGround.Tests.sourcelink.json
+C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\bin\Debug\net9.0\FluentAssertions.dll
