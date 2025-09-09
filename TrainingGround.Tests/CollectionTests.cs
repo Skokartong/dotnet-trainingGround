@@ -93,9 +93,11 @@ public class CollectionTests
     }
 
     [Fact]
-    public void a_person_can_have_more_than_one_address()
+    public void a_student_can_have_more_than_one_address()
     {
         // Arrange
+        var student = new Student("Louise", 2000, 1.68, "54321");
+
         var addresses = new List<Address>();
         var address1 = new Address("Gatan", 1, "Staden", 12345);
         var address2 = new Address("Vägen", 2, "Byhålan", 54321);

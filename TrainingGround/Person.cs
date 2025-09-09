@@ -3,24 +3,24 @@ public class Person
     public string? Name { get; private set; }
     public int BirthYear { get; private set; }
     public double HeightInMeters { get; private set; }
-    public Address? Address { get; set; }
+    public List<Address?> Addresses { get; private set; }
     public AgeGroup AgeGroup { get; set; }
 
-    public Person(string name, int birthYear, double heightInMeters, Address? address = null)
+    public Person(string name, int birthYear, double heightInMeters)
     {
         Name = name;
         BirthYear = birthYear;
         HeightInMeters = heightInMeters;
-        Address = address;
+        Addresses = new List<Address?>();
     }
 
     // Overlayering constructor to create person using age instead of birth year
-    public Person(string name, int age, double heightInMeters, bool isAge, Address? address = null)
+    public Person(string name, int age, double heightInMeters, bool isAge)
     {
         Name = name;
         BirthYear = DateTime.Now.Year - age;
         HeightInMeters = heightInMeters;
-        Address = address;
+        Addresses = new List<Address?>();
     }
 
     public int GetAge(int currentYear)
