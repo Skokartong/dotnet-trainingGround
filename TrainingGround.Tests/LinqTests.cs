@@ -53,5 +53,31 @@ public class LinqTests
         // Assert
         Assert.Equal(3, longNames.Count);
     }
+
+    [Fact]
+    public void linq_to_filter_ages_above_20_in_ascending_order()
+    {
+        // Arrange
+        var people = new List<Person>
+        {
+            new Person("Annika", 2000, 1.6),
+            new Person("Johanna", 1981, 1.8),
+            new Person("Bengt", 2010, 1.5),
+            new Person("Dave", 1975, 1.75),
+            new Person("Eve", 2015, 1.4)
+        };
+
+        // Act
+        var adults = people
+        .Select(p => p.GetAge(DateTime.Now.Year))
+        .Where(age => age > 19)
+        .OrderBy(age => age)
+        .ToList();
+
+        // Assert
+        Assert.All(adults, age => Assert.True(age > 19));
+        Assert.Equal(adults.OrderBy(a => a), adults);
+        Assert.Equal(3, adults.Count);
+    }
 }
 
