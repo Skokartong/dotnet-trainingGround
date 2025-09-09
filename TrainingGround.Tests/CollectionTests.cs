@@ -61,6 +61,8 @@ public class CollectionTests
     {
         // Arrange
         var integerList = new List<int>();
+
+        // Act
         integerList.Add(1);
         integerList.Add(2);
         integerList.Add(3);
