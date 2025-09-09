@@ -25,7 +25,14 @@ public class Person
 
     public int GetAge(int currentYear)
     {
-        return currentYear - BirthYear;
+        var age = currentYear - BirthYear;
+
+        if (age < 0)
+        {
+            throw new Exception("Not born yet");
+        }
+
+        return age;
     }
 
     public void SetAgeGroup()
