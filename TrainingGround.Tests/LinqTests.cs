@@ -19,6 +19,22 @@ public class LinqTests
     }
 
     [Fact]
+    public void linq_to_return_all_positive_numbers()
+    {
+        // Arrange 
+        var numbers = new List<int> { 7, 101, 33, 20, -5, -3 };
+
+        // Act
+        var positiveNumbers = numbers
+        .Where(n => n > 0)
+        .ToList();
+
+        // Assert
+        Assert.Equal(4, positiveNumbers.Count);
+        Assert.All(positiveNumbers, n => Assert.True(n > 0));
+    }
+
+    [Fact]
     public void linq_to_find_first_letter_at_correct_index()
     {
         // Arrange
