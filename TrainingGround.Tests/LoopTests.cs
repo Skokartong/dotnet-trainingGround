@@ -52,4 +52,24 @@ public class LoopTests
         // Assert
         Assert.Equal(5, alphabet.Count);
     }
+
+    [Fact]
+    public void foreach_loop_iterates_over_students()
+    {
+        // Arrange
+        var students = new List<Student>();
+
+        students.Add(new Student("Alice", 2000, 1.65, "S1"));
+        students.Add(new Student("Bob", 1999, 1.75, "S2"));
+        students.Add(new Student("Charlie", 2001, 1.80, "S3"));
+
+        // Act
+        foreach (var student in students)
+        {
+            Console.WriteLine("Student: " + student.Name + ", Birth Year: " + student.BirthYear);
+        }
+
+        // Assert
+        Assert.Equal(3, students.Count);
+    }
 }
