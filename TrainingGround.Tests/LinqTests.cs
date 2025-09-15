@@ -27,6 +27,7 @@ public class LinqTests
         // Act
         var positiveNumbers = numbers
         .Where(n => n > 0)
+        .OrderByDescending(n => n)
         .ToList();
 
         // Assert
