@@ -76,6 +76,7 @@ public class CollectionTests
         Assert.Equal(2, integerList.Count);
     }
 
+    // Note: this test displays the concept of Generics with List<T>
     [Fact]
     public void a_list_can_hold_any_type()
     {
