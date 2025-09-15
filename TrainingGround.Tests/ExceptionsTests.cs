@@ -4,6 +4,8 @@ namespace TrainingGround.Tests;
 
 public class ExceptionsTests
 {
+    // Method 1: Assert.Throws
+    // More concise way to test for exceptions and more commonly used in xUnit tests
     [Fact]
     public void get_age_throws_exception_for_future_birth_year()
     {
@@ -16,6 +18,8 @@ public class ExceptionsTests
         Assert.Equal("Not born yet", exception.Message);
     }
 
+    // Method 2: try-catch
+    // More traditional way to test for exceptions
     [Fact]
     public void get_age_throws_exception_for_negative_birth_year()
     {
