@@ -19,7 +19,7 @@ public class LinqTests
     }
 
     [Fact]
-    public void linq_to_return_all_positive_numbers()
+    public void linq_to_return_all_positive_numbers_in_descending_order()
     {
         // Arrange 
         var numbers = new List<int> { 7, 101, 33, 20, -5, -3 };
@@ -33,6 +33,20 @@ public class LinqTests
         // Assert
         Assert.Equal(4, positiveNumbers.Count);
         Assert.All(positiveNumbers, n => Assert.True(n > 0));
+    }
+
+    [Fact]
+    public void linq_to_find_first_number_larger_than_13()
+    {
+        // Arrange
+        var numbers = new List<int> { 2, 20, 1, 9, 1, 17 };
+
+        // Act
+        var firstNumberLargerThan13 = numbers
+        .Find(n => n > 13);
+
+        // Assert
+        Assert.Equal(20, firstNumberLargerThan13);
     }
 
     [Fact]
