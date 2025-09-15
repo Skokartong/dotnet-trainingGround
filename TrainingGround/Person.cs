@@ -23,7 +23,7 @@ public class Person
         Addresses = new List<Address?>();
     }
 
-    public int GetAge(int BirthYear)
+    public int GetAge()
     {
         var currentYear = DateTime.Now.Year;
         var age = currentYear - BirthYear;
@@ -33,12 +33,17 @@ public class Person
             throw new Exception("Not born yet");
         }
 
+        else if (BirthYear < 0)
+        {
+            throw new Exception("Person can't be born before year 0");
+        }
+
         return age;
     }
 
     public void SetAgeGroup()
     {
-        var age = GetAge(DateTime.Now.Year);
+        var age = GetAge();
         if (age < 13)
         {
             AgeGroup = AgeGroup.Child;

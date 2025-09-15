@@ -38,7 +38,7 @@ public class PersonTests
         var currentYear = DateTime.Now.Year;
 
         // Act
-        var age = person.GetAge(person.BirthYear);
+        var age = person.GetAge();
 
         // Assert
         Assert.Equal(currentYear - person.BirthYear, age);

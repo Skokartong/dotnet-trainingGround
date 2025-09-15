@@ -69,7 +69,7 @@ public class LinqTests
 
         // Act
         var adults = people
-        .Select(p => p.GetAge(DateTime.Now.Year))
+        .Select(p => p.GetAge())
         .Where(age => age > 19)
         .OrderBy(age => age)
         .ToList();

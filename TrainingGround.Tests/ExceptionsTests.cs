@@ -12,7 +12,7 @@ public class ExceptionsTests
         var currentYear = DateTime.Now.Year;
 
         // Act & Assert
-        var exception = Assert.Throws<Exception>(() => person.GetAge(currentYear));
+        var exception = Assert.Throws<Exception>(() => person.GetAge());
         Assert.Equal("Not born yet", exception.Message);
     }
 
@@ -24,8 +24,8 @@ public class ExceptionsTests
         var currentYear = DateTime.Now.Year;
 
         // Act & Assert
-        var exception = Assert.Throws<Exception>(() => person.GetAge(person.BirthYear));
-        Assert.Equal("Not born yet", exception.Message);
+        var exception = Assert.Throws<Exception>(() => person.GetAge());
+        Assert.Equal("Person can't be born before year 0", exception.Message);
     }
 
     [Fact]
