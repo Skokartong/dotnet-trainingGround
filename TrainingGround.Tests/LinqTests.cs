@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Xunit;
 
 namespace TrainingGround.Tests;
@@ -142,6 +143,42 @@ public class LinqTests
         Assert.All(adults, age => Assert.True(age > 19));
         Assert.Equal(adults.OrderBy(a => a), adults);
         Assert.Equal(3, adults.Count);
+    }
+
+    // Anonymous object
+    [Fact]
+    public void linq_to_filter_people_with_long_names_and_display_their_height()
+    {
+        // Arrange
+        var person1 = new { Name = "Alfred", Height = 2.0 };
+        var person2 = new { Name = "Annika", Height = 1.6 };
+        var person3 = new { Name = "Johanna", Height = 1.8 };
+        var person4 = new { Name = "John", Height = 1.4 };
+        var person5 = new { Name = "Ulf", Height = 1.42 };
+
+
+        // List of anonymous objects
+        var people = new List<object>
+        {
+            person1,
+            person2,
+            person3,
+            person4,
+            person5
+       };
+
+        // Act 
+        // Note: Need to cast to dynamic to access properties of anonymous types
+        var peopleWithLongNamesHeights = people
+        .Where(p => ((dynamic)p).Name.Length > 5)
+        .Select(p => ((dynamic)p).Height)
+        .ToList();
+
+        // Assert
+        Assert.Equal(3, peopleWithLongNamesHeights.Count);
+        Assert.Equal(2.0, peopleWithLongNamesHeights[0]);
+        Assert.Equal(1.6, peopleWithLongNamesHeights[1]);
+        Assert.Equal(1.8, peopleWithLongNamesHeights[2]);
     }
 }
 
