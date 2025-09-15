@@ -91,4 +91,24 @@ public class LoopTests
 
         Assert.True(foundIt);
     }
+
+    [Fact]
+    public void continue_statement_skips_to_next_iteration()
+    {
+        // Arrange
+        var numbers = new List<int> { 2, 1, 0, 5, 4 };
+        var result = new List<int>();
+
+        foreach (var number in numbers)
+        {
+            if (number > 3)
+            {
+                continue; // Ignores everything above and goes directly to the next iteration
+            }
+
+            result.Add(number + 10);
+        }
+
+        Assert.Equal(new List<int> { 12, 11, 10 }, result);
+    }
 }
