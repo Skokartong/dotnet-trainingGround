@@ -5,8 +5,8 @@ C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround\obj\Debug\ne
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround\obj\Debug\net9.0\TrainingGround.AssemblyInfoInputs.cache
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround\obj\Debug\net9.0\TrainingGround.AssemblyInfo.cs
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround\obj\Debug\net9.0\TrainingGround.csproj.CoreCompileInputs.cache
+C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround\obj\Debug\net9.0\TrainingGround.sourcelink.json
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround\obj\Debug\net9.0\TrainingGround.dll
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround\obj\Debug\net9.0\refint\TrainingGround.dll
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround\obj\Debug\net9.0\TrainingGround.pdb
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround\obj\Debug\net9.0\ref\TrainingGround.dll
-C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround\obj\Debug\net9.0\TrainingGround.sourcelink.json

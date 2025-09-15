@@ -25,7 +25,7 @@ public class ExceptionsTests
             var i = 1;
 
             // Act
-            var result = 1 / (i - 0);
+            var result = 1 / (i - 1);
         }
         catch (System.DivideByZeroException ex)
         {
