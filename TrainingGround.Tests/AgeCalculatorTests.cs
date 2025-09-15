@@ -16,12 +16,22 @@ public class AgeCalculatorTests
     }
 
     [Fact]
-    public void someone_born_in_3000_is_not_born_yet_in_2025()
+    public void someone_born_in_future_years_throws_exception()
     {
         // Arrange & Act
         Action act = () => AgeCalculator.CalculateAge(2025, 3000);
 
         // Assert
         act.Should().Throw<Exception>().WithMessage("Not born yet");
+    }
+
+    [Fact]
+    public void someone_born_in_a_negative_year_throws_exception()
+    {
+        // Arrange & Act
+        Action act = () => AgeCalculator.CalculateAge(2025, -5000);
+
+        // Assert
+        act.Should().Throw<Exception>().WithMessage("Person can't be born before year 0");
     }
 }
