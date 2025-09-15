@@ -19,13 +19,23 @@ public class ExceptionsTests
     [Fact]
     public void get_age_throws_exception_for_negative_birth_year()
     {
-        // Arrange
-        var person = new Person("Negative Year Person", -5000, 1.69);
-        var currentYear = DateTime.Now.Year;
+        try
+        {
+            // Arrange
+            var person = new Person("Negative Year Person", -5000, 1.69);
+            var currentYear = DateTime.Now.Year;
 
-        // Act & Assert
-        var exception = Assert.Throws<Exception>(() => person.GetAge());
-        Assert.Equal("Person can't be born before year 0", exception.Message);
+            // Act
+            var age = person.GetAge();
+        }
+        catch (System.Exception ex)
+        {
+            // Assert
+            Assert.Equal("Person can't be born before year 0", ex.Message);
+            return;
+        }
+
+        Assert.Fail("Exception was not thrown");
     }
 
     [Fact]
