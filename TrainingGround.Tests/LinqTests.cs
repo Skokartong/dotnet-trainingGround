@@ -108,6 +108,7 @@ public class LinqTests
         // Act
         var longNames = names
         .Where(n => n.Name?.Length > 4)
+        .Select(n => n.Name)
         .ToList();
 
         // Assert
