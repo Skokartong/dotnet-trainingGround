@@ -23,8 +23,9 @@ public class Person
         Addresses = new List<Address?>();
     }
 
-    public int GetAge(int currentYear)
+    public int GetAge(int BirthYear)
     {
+        var currentYear = DateTime.Now.Year;
         var age = currentYear - BirthYear;
 
         if (age < 0)

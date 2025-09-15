@@ -17,6 +17,18 @@ public class ExceptionsTests
     }
 
     [Fact]
+    public void get_age_throws_exception_for_negative_birth_year()
+    {
+        // Arrange
+        var person = new Person("Negative Year Person", -5000, 1.69);
+        var currentYear = DateTime.Now.Year;
+
+        // Act & Assert
+        var exception = Assert.Throws<Exception>(() => person.GetAge(person.BirthYear));
+        Assert.Equal("Not born yet", exception.Message);
+    }
+
+    [Fact]
     public void divide_by_zero_throws_exception()
     {
         try

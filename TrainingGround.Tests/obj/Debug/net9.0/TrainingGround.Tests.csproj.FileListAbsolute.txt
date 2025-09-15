@@ -19,6 +19,7 @@ C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\bin\De
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\bin\Debug\net9.0\CoverletSourceRootsMapping_TrainingGround.Tests
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\bin\Debug\net9.0\TrainingGround.Tests.deps.json
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\bin\Debug\net9.0\TrainingGround.Tests.runtimeconfig.json
+C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\bin\Debug\net9.0\TrainingGround.Tests.pdb
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\bin\Debug\net9.0\FluentAssertions.dll
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\bin\Debug\net9.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\bin\Debug\net9.0\Microsoft.TestPlatform.Utilities.dll
@@ -100,5 +101,4 @@ C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\obj\De
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\obj\Debug\net9.0\refint\TrainingGround.Tests.dll
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\obj\Debug\net9.0\TrainingGround.Tests.pdb
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\obj\Debug\net9.0\TrainingGround.Tests.genruntimeconfig.cache
-C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\bin\Debug\net9.0\TrainingGround.Tests.pdb
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\obj\Debug\net9.0\ref\TrainingGround.Tests.dll
