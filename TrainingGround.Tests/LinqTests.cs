@@ -64,6 +64,21 @@ public class LinqTests
     }
 
     [Fact]
+    public void linq_to_check_if_all_numbers_matches_criteria()
+    {
+        // Arrange
+        var numbers = new List<double> { 1.0, 1.0, 1.0, 1.0, 1.0 };
+
+        // Act
+        var allNumbersAreOne = numbers
+        .All(n => n == 1.0)
+        .ToString();
+
+        // Assert
+        Assert.Equal("True", allNumbersAreOne);
+    }
+
+    [Fact]
     public void linq_to_find_first_letter_at_correct_index()
     {
         // Arrange
