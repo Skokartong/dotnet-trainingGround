@@ -72,4 +72,23 @@ public class LoopTests
         // Assert
         Assert.Equal(3, students.Count);
     }
+
+    [Fact]
+    public void break_statement_exits_foreach_loop_earlier()
+    {
+        // Arrange
+        var numbers = new List<int> { 9, 7, 3, 0, 87 };
+        var foundIt = false;
+
+        foreach (var number in numbers)
+        {
+            if (number == 0)
+            {
+                foundIt = true;
+                break; // Stop iterating over the list altogether; continue at the assertion
+            }
+        }
+
+        Assert.True(foundIt);
+    }
 }
