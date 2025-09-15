@@ -60,12 +60,13 @@ public class CollectionTests
     public void a_list_is_very_flexible()
     {
         // Arrange
-        var integerList = new List<int>();
-
-        // Act
-        integerList.Add(1);
-        integerList.Add(2);
-        integerList.Add(3);
+        var integerList = new List<int>
+        {
+            // Act
+            1,
+            2,
+            3
+        };
 
         integerList.RemoveAt(0); // Removes the first item at index 0
 
