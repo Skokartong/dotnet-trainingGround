@@ -1,8 +1,6 @@
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\bin\Debug\net9.0\testhost.dll
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\bin\Debug\net9.0\testhost.exe
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\bin\Debug\net9.0\xunit.runner.visualstudio.testadapter.dll
-C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\bin\Debug\net9.0\xunit.runner.reporters.netcoreapp10.dll
-C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\bin\Debug\net9.0\xunit.runner.utility.netcoreapp10.dll
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\bin\Debug\net9.0\TrainingGround.Tests.dll
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\bin\Debug\net9.0\Microsoft.TestPlatform.CoreUtilities.dll
 C:\Users\Amanda\salt\precourse\dotnet-trainingGround\TrainingGround.Tests\bin\Debug\net9.0\Microsoft.TestPlatform.PlatformAbstractions.dll

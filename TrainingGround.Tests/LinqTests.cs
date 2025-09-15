@@ -113,6 +113,9 @@ public class LinqTests
 
         // Assert
         Assert.Equal(3, longNames.Count);
+        Assert.Equal("Bertil", longNames[0]);
+        Assert.Equal("Cecilia", longNames[1]);
+        Assert.Equal("David", longNames[2]);
     }
 
     [Fact]
