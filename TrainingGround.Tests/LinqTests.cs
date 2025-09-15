@@ -50,6 +50,20 @@ public class LinqTests
     }
 
     [Fact]
+    public void linq_to_check_if_any_number_matches_criteria()
+    {
+        // Arrange
+        var numbers = new List<int> { -2, 11, 1, 99, 1, 17 };
+
+        // Act
+        var anyNumberLargerThan100 = numbers
+        .Any(n => n > 100);
+
+        // Assert
+        Assert.False(anyNumberLargerThan100);
+    }
+
+    [Fact]
     public void linq_to_find_first_letter_at_correct_index()
     {
         // Arrange
