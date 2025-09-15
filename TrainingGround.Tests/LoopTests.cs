@@ -37,4 +37,19 @@ public class LoopTests
 
         Assert.Equal(5, numbers.Length);
     }
+
+    [Fact]
+    public void foreach_loop_iterates_over_list()
+    {
+        // Arrange
+        var alphabet = new List<char> { 'A', 'B', 'C', 'D', 'E' };
+
+        foreach (var letter in alphabet)
+        {
+            Console.WriteLine("Letter: " + letter);
+        }
+
+        // Assert
+        Assert.Equal(5, alphabet.Count);
+    }
 }
