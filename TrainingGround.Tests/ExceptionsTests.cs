@@ -7,21 +7,19 @@ public class ExceptionsTests
     // Method 1: Assert.Throws
     // More concise way to test for exceptions and more commonly used in xUnit tests
     [Fact]
-    public void get_age_throws_exception_for_future_birth_year()
+    public void person_throws_exception_for_future_birth_year()
     {
-        // Arrange
-        var person = new Person("Future Person", 3000, 1.75);
-        var currentYear = DateTime.Now.Year;
+        // Act 
+        var exception = Assert.Throws<Exception>(() => new Person("Future Person", 3000, 1.75));
 
-        // Act & Assert
-        var exception = Assert.Throws<Exception>(() => person.GetAge());
+        // Assert
         Assert.Equal("Not born yet", exception.Message);
     }
 
     // Method 2: try-catch
     // More traditional way to test for exceptions
     [Fact]
-    public void get_age_throws_exception_for_negative_birth_year()
+    public void person_throws_exception_for_negative_birth_year()
     {
         try
         {
