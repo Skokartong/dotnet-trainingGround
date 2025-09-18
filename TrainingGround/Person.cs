@@ -1,6 +1,6 @@
 public class Person
 {
-    public string? Name { get; private set; }
+    public string Name { get; private set; }
     public int BirthYear { get; private set; }
     public double HeightInMeters { get; private set; }
     public List<Address?> Addresses { get; private set; }
@@ -8,10 +8,35 @@ public class Person
 
     public Person(string name, int birthYear, double heightInMeters)
     {
+        ValidationCheck(name, birthYear, heightInMeters);
         Name = name;
         BirthYear = birthYear;
         HeightInMeters = heightInMeters;
         Addresses = new List<Address?>();
+    }
+
+    // Fail early: validate input parameters so object is always in a valid state
+    private void ValidationCheck(string name, int birthYear, double heightInMeters)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+        {
+            throw new Exception("Name can't be empty");
+        }
+
+        if (birthYear < 0)
+        {
+            throw new Exception("Person can't be born before year 0");
+        }
+
+        if (birthYear > DateTime.Now.Year)
+        {
+            throw new Exception("Not born yet");
+        }
+
+        if (heightInMeters <= 0)
+        {
+            throw new Exception("Height must be a positive number");
+        }
     }
 
     // Overlayering constructor to create person using age instead of birth year
