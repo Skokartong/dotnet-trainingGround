@@ -16,6 +16,16 @@ public class ExceptionsTests
         Assert.Equal("Not born yet", exception.Message);
     }
 
+    [Fact]
+    public void person_throws_exception_for_zero_height()
+    {
+        // Act 
+        var exception = Assert.Throws<Exception>(() => new Person("Zero Height Person", 1990, 0));
+
+        // Assert
+        Assert.Equal("Height must be a positive number", exception.Message);
+    }
+
     // Method 2: try-catch
     // More traditional way to test for exceptions
     [Fact]
