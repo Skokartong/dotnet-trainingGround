@@ -26,6 +26,16 @@ public class ExceptionsTests
         Assert.Equal("Height must be a positive number", exception.Message);
     }
 
+    [Fact]
+    public void person_throws_exception_for_empty_name()
+    {
+        // Act 
+        var exception = Assert.Throws<Exception>(() => new Person("", 1990, 1.69));
+
+        // Assert
+        Assert.Equal("Name can't be empty", exception.Message);
+    }
+
     // Method 2: try-catch
     // More traditional way to test for exceptions
     [Fact]
