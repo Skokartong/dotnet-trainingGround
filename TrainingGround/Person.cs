@@ -53,16 +53,6 @@ public class Person
         var currentYear = DateTime.Now.Year;
         var age = currentYear - BirthYear;
 
-        if (age < 0)
-        {
-            throw new Exception("Not born yet");
-        }
-
-        else if (BirthYear < 0)
-        {
-            throw new Exception("Person can't be born before year 0");
-        }
-
         return age;
     }
 
